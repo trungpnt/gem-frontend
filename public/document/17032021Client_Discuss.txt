@@ -1,0 +1,49 @@
+Lớp:
+label:
+	A: 2,4
+	B: 3,5
+	C: T7,cn buổi sáng
+	D: T7, CN buổi chiều
+Range đi chung với label=>range đổi tên thành level
+
+add lớp: thêm sĩ số: 13/20
++pHÒNG HỌC, địa chỉ
++ngày bắt đầu khóa học: 
++Tổng số buổi: user nhập==> có thể được edit sau này
++buổi học: Monday, wednesday
++giờ học : combo box chọn
+==> tự tính ngày kết thúc ( ngày nghỉ user đc pickup=>k tính ngày nghỉ, lớp đc nghỉ học)
+**tính năng khóa ngày nghỉ==> lớp k học
+** chức năng define ngày nghỉ
+vd:class name:
+preIelts
+
+==> tự sinh ra mã lớp(code class):                                                                 x
+năm(21)+45(level)+Mar(tháng hiện tại)+A(label)+preIelts(className) => 2145MARApreIelts             x
+
+
+**Tính học phí,ưu đãi
+==> học phí = tổng tiền khóa học - ưu đãi
+- in học phí, report
+Gồm các loại ưu đãi:mã 001 (miễn sách)
+UI: set học phí , ngày đóng trc để đc hưởng ưu đãi, có cho sách hay ko(cho sách thì k bớt 50k)
+
+** Học viên:
+tiềm năng, chính thức
+Học viên tiềm năng: 
++ giờ rảnh (chọn thứ, buổi, giờ) => tìm lớp tiềm năng học đc trong tương lai theo code class ( cả lớp đang chạy(thừa slot), lớp chưa khai giảng) x
++ xếp lớp (thầy cô xếp lớp) x
++đã test: xổ xuống cho nhập điểm nghe, nói.... x
+Học viên chính thức: 
++xếp lớp (thầy cô xếp lớp)
++sau khi lớp cũ kết thúc, cho phép set move lên lớp trên=> ý tưởng: thêm lớp mới, bấm thêm student=> tìm kiếm trong list student theo mã code class cũ==> nhấn move=> học viên lên lớp mới x
+- lớp đã kết thúc   x
+** giáo Viên:
+Thêm chức năng giờ rảnh của giáo viên
+- giáo viên điểm danh học sinh (chỉ điểm danh ngày học)=> tính giờ dạy=> tính lương
+
+**màn hình tính lương
+1h -> bao nhiêu tiền==>hết tháng(ngày 30) tự tính ngày giáo viên điểm danh để tính tiền
+
+**TA:
+- chức năng check-in 
