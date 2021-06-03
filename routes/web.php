@@ -32,7 +32,7 @@ Route::get('/potential-customers', function () {
     return view('potential_customers');
 });
 Route::get('/level0-customers', function () {
-    return view('level0-customers');
+    return view('level0_customers');
 });
 Route::get('/account-management', function () {
     return view('account_management');
@@ -41,5 +41,5 @@ Route::get('/check-in', function () {
     return view('check_in');
 });
 Route::get('/calendar-management', function () {
-    return view('calendar-management');
+    return view('calendar_management');
 });

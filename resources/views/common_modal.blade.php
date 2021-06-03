@@ -152,13 +152,13 @@
                                     <div class="col-md-3">
                                         <div class="input-icon right">
                                             <a href="#" class="btn green">
-                                                Add session
+                                                Assign
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3">Session list <span class="required">
+                                    <label class="control-label col-md-3">Assign list <span class="required">
                                             * </span>
                                     </label>
                                     <div class="col-md-7">
@@ -2163,12 +2163,12 @@
                                     Your form validation is successful!
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3">Contact page day
+                                    <label class="control-label col-md-3">Contact page date
                                     </label>
                                     <div class="col-md-8">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="text" class="form-control" name="name" value="" />
+                                            <input type="date" class="form-control" name="name" value="" />
                                         </div>
                                     </div>
                                 </div>
@@ -2179,13 +2179,13 @@
                                     <div class="col-md-5">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="text" class="form-control" name="name" value="" />
+                                            <input type="date" class="form-control" name="name" value="" />
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="text" class="form-control" name="name" value="" placeholder="Time" />
+                                            <input type="time" class="form-control" name="name" value="" placeholder="Time" />
                                         </div>
                                     </div>
                                 </div>
@@ -3382,7 +3382,11 @@
                                     <th>
                                         Remain paid
                                     </th>
-
+                                    
+                                    <th>
+                                        Collected by    
+                                    </th>
+                                    
                                     <th>
                                         Note
                                     </th>
@@ -3403,6 +3407,10 @@
 
                                     <td>
                                         1,900,000
+                                    </td>
+
+                                    <td>
+                                        admin
                                     </td>
 
                                     <td>

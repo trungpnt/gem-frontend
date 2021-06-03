@@ -2,7 +2,7 @@
 @section ('content')
 <!-- BEGIN PAGE HEADER-->
 <h3 class="page-title">
-	Teacher management <small></small>
+	Teacher Assistant management <small></small>
 </h3>
 <div class="page-bar">
 	<ul class="page-breadcrumb">
@@ -12,7 +12,7 @@
 			<i class="fa fa-angle-right"></i>
 		</li>
 		<li>
-			<a href="#">class management</a>
+			<a href="#">Teacher Assistant</a>
 			<i class="fa fa-angle-right"></i>
 		</li>
 		<li>
@@ -51,7 +51,7 @@
 		<div class="portlet box blue">
 			<div class="portlet-title">
 				<div class="caption">
-					<i class="fa fa-edit"></i>Teacher list
+					<i class="fa fa-edit"></i>Teacher Assistant list
 				</div>
 				<div class="tools">
 					<a href="javascript:;" class="collapse">
