@@ -368,7 +368,8 @@ var TableAccount = function () {
             jqTds[1].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[1] + '">';
             jqTds[2].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[2] + '">';
             jqTds[3].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[3] + '">';
-            jqTds[4].innerHTML = '<a class="edit" href="">Save</a>&nbsp;<a class="cancel" href="">Cancel</a>';	
+            jqTds[4].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[4] + '">';
+            jqTds[5].innerHTML = '<a class="edit" href="">Save</a>&nbsp;<a class="cancel" href="">Cancel</a>';	
         }
 
         function saveRow(oTable, nRow) {
@@ -377,7 +378,8 @@ var TableAccount = function () {
             oTable.fnUpdate(jqInputs[1].value, nRow, 1, false);
             oTable.fnUpdate(jqInputs[2].value, nRow, 2, false);
             oTable.fnUpdate(jqInputs[3].value, nRow, 3, false);
-            oTable.fnUpdate('<a href="#" class="edit btn btn-icon-only blue"><i class="fa fa-edit"></i></a><a href="#" class="delete btn btn-icon-only red"><i class="fa fa-times"></i></a>', nRow, 4, false);
+            oTable.fnUpdate(jqInputs[4].value, nRow, 4, false);
+            oTable.fnUpdate('<a href="#" class="edit btn btn-icon-only blue"><i class="fa fa-edit"></i></a><a href="#" class="delete btn btn-icon-only red"><i class="fa fa-times"></i></a>', nRow, 5, false);
             oTable.fnDraw();
         }
 
@@ -387,7 +389,8 @@ var TableAccount = function () {
             oTable.fnUpdate(jqInputs[1].value, nRow, 1, false);
             oTable.fnUpdate(jqInputs[2].value, nRow, 2, false);
             oTable.fnUpdate(jqInputs[3].value, nRow, 3, false);
-            oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 4, false);
+            oTable.fnUpdate(jqInputs[4].value, nRow, 4, false);
+            oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 5, false);
             oTable.fnDraw();
         }
         
@@ -456,7 +459,7 @@ var TableAccount = function () {
                 }
             }
 
-            var aiNew = oTable.fnAddData(['', '', '','','']);
+            var aiNew = oTable.fnAddData(['', '', '','','','']);
             var nRow = oTable.fnGetNodes(aiNew[0]);
             
             editRow(oTable, nRow);
@@ -702,7 +705,7 @@ var TableListStudent = function () {
 }();
 var TableListTeacher = function () {
 
-    var handleTable = function () {
+    var handleTable = function (id) {
 
         function restoreRow(oTable, nRow) {
             var aData = oTable.fnGetData(nRow);
@@ -759,7 +762,9 @@ var TableListTeacher = function () {
             oTable.fnDraw();
         }
         
-        var table = $('#teacher-list-table');
+        // var table = $('#teacher-list-table');
+        
+        var table = $(id);
         
         var oTable = table.dataTable({
 
@@ -805,13 +810,13 @@ var TableListTeacher = function () {
         var nEditing = null;
         var nNew = false;
 
-        $('#teacher_add_new').click(function (e) {
+        $('.teacher_add_new').click(function (e) {
             e.preventDefault();
 
             if (nNew && nEditing) {
                 if (confirm("Previose row not saved. Do you want to save it ?")) {
                     saveRow(oTable, nEditing); // save
-                    $(nEditing).find("td:first").html("Untitled");
+                    $(nEditing).find("td:second").html("Untitled");
                     nEditing = null;
                     nNew = false;
 
@@ -884,8 +889,9 @@ var TableListTeacher = function () {
     return {
 
         //main function to initiate the module
-        init: function () {
-            handleTable();
+        init: function (id) {
+            console.log(id);
+            handleTable(id);
         }
 
     };
@@ -980,6 +986,7 @@ var HistoryPaidFeeStudent = function () {
         var nNew = false;
 
         $('#add_paid_transaction').click(function (e) {
+            console.log('hoho');
             e.preventDefault();
 
             if (nNew && nEditing) {

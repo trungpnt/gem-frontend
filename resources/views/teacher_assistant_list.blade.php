@@ -69,7 +69,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="btn-group">
-								<button id="sample_editable_1_new" class="btn green" data-toggle="modal" data-target="#addTeacherModal">
+								<button id="teacher_add_new" class="btn green teacher_add_new" data-toggle="modal" data-target="#addTeacherModal">
 									Add New <i class="fa fa-plus"></i>
 								</button>
 							</div>
@@ -102,7 +102,7 @@
 						</div>
 					</div>
 				</div>
-				<table class="table table-striped table-hover table-bordered" id="teacher-list-table">
+				<table class="table table-striped table-hover table-bordered" id="teacher-assistant-list-table">
 					<thead>
 						<tr>
 							<th data-editable="true">

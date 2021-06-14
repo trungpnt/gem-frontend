@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Add Class Info</h4>
+                <h4 class="modal-title">Class Info</h4>
             </div>
             <div class="modal-body form">
                 <!-- BEGIN EXAMPLE TABLE PORTLET-->
@@ -73,14 +73,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3">Range <span class="required">
+                                    <label class="control-label col-md-3">Level <span class="required">
                                             * </span>
                                     </label>
                                     <div class="col-md-7">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
                                             <select class="form-control" name="select">
-                                                <option value="">Range</option>
+                                                <option value="">Level</option>
                                                 <option value="Category 1">4.5-5.5</option>
                                                 <option value="Category 2">5.5-6.5</option>
                                                 <option value="Category 3">Toiec 700+</option>
@@ -95,7 +95,7 @@
                                     <div class="col-md-7">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="text" class="form-control" name="slots" value="" />
+                                            <input type="number" min="0" class="form-control" name="slots" value="" />
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                     <div class="col-md-2">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="text" class="form-control" name="slots" value="" />
+                                            <input type="number" min="0" class="form-control" name="number_of_session" value="" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -128,8 +128,8 @@
                                             <i class="fa"></i>
                                             <select class="form-control" name="select">
                                                 <option value="">Day...</option>
-                                                <option value="Category 1">Monday (7AM-9AM)</option>
-                                                <option value="Category 3">Wednesday(7AM-9AM)</option>
+                                                <option value="Category 1">Monday (7:00-9:00)</option>
+                                                <option value="Category 3">Wednesday(16:00-18:00)</option>
                                             </select>
                                         </div>
                                     </div>
@@ -193,6 +193,16 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Tuition fee <span class="required">
+                                            * </span>
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="number" min="0" class="form-control" name="course_fee" value="" />
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label class="control-label col-md-3">Notes <span class="required">
                                             * </span>
@@ -200,7 +210,7 @@
                                     <div class="col-md-7">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <textarea type="text" class="form-control" name="creditcard"></textarea>
+                                            <textarea type="number" min="0" class="form-control" name="creditcard"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -279,11 +289,11 @@
                                                             </th>
 
                                                             <th>
-                                                                Class level enrolled
+                                                                Discount code
                                                             </th>
 
                                                             <th>
-                                                                Discount code
+                                                                Tuition fee
                                                             </th>
 
                                                             <th>
@@ -322,14 +332,10 @@
                                                             <td>
                                                                 20/02/2021
                                                                 <ul>
-                                                                    <li>speaking: 6</li>
-                                                                    <li>writing: 6</li>
-                                                                    <li>listening: 7</li>
+                                                                    <li>S: 6</li>
+                                                                    <li>W: 6</li>
+                                                                    <li>L: 7</li>
                                                                 </ul>
-                                                            </td>
-
-                                                            <td>
-                                                                None
                                                             </td>
 
                                                             <td>
@@ -341,8 +347,11 @@
                                                             </td>
 
                                                             <td>
-                                                                Da lien he voi phu huynh
-                                                                co the hoc tu thang 6/2021
+                                                                200,000
+                                                            </td>
+
+                                                            <td>
+                                                                abc xyz
                                                             </td>
 
                                                             <td>
@@ -372,14 +381,7 @@
                                         <!-- END EXAMPLE TABLE PORTLET-->
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3">Gía tiền khóa học <span class="required">
-                                            * </span>
-                                    </label>
-                                    <div class="col-md-7">
-                                        <input>
-                                    </div>
-                                </div>
+                                
                                 <div class="form-group">
                                     <label class="control-label col-md-3">Status <span class="required">
                                             * </span>
@@ -388,8 +390,7 @@
                                         <div class="input-icon right">
                                             <i class="fa"></i>
                                             <select class="form-control">
-                                                <option>Running</option>
-                                                <option>Stopped</option>
+                                                <option>Active</option>
                                                 <option>Deactive</option>
                                             </select>
                                         </div>
@@ -547,9 +548,9 @@
                                     <td>
                                         20/02/2021
                                         <ul>
-                                            <li>speaking: 6</li>
-                                            <li>writing: 6</li>
-                                            <li>listening: 7</li>
+                                            <li>S: 6</li>
+                                            <li>W: 6</li>
+                                            <li>L: 7</li>
                                         </ul>
                                     </td>
 
@@ -708,7 +709,7 @@
                                     <div class="col-md-6">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="text" class="form-control" name="parent_email" value="" disabled />
+                                            <input type="email" class="form-control" name="parent_email" value="" disabled />
                                         </div>
                                     </div>
                                 </div>
@@ -871,9 +872,9 @@
                                     <td>
                                         20/02/2021
                                         <ul>
-                                            <li>speaking: 6</li>
-                                            <li>writing: 6</li>
-                                            <li>listening: 7</li>
+                                            <li>S: 6</li>
+                                            <li>W: 6</li>
+                                            <li>L: 7</li>
                                         </ul>
                                     </td>
 
@@ -915,7 +916,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Add Class Info</h4>
+                <h4 class="modal-title">Class Info</h4>
             </div>
             <div class="modal-body form">
                 <!-- BEGIN EXAMPLE TABLE PORTLET-->
@@ -1057,21 +1058,184 @@
     </div>
 </div>
 <!-- END ADD RANGE -->
+<!-- BEGIN STUDENT LIST IN CLASS MODAL -->
+<div class="modal fade" id="studentListCheckInModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-full">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title">Student List in Class</h4>
+            </div>
+            <div class="modal-body form">
+                <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                <div class="portlet box blue">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-edit"></i>Student list in class :
+                        </div>
+                        <div class="tools">
+                            <a href="javascript:;" class="collapse">
+                            </a>
+                            <!-- <a href="#portlet-config" data-toggle="modal" class="config">
+                            </a> -->
+                            <a href="javascript:;" class="reload">
+                            </a>
+                            <!-- <a href="javascript:;" class="remove">
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="table-toolbar">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- <div class="btn-group">
+                                        <button id="add_student_to_class_btn" class="btn green" data-toggle="modal" data-target="#listPotentialStudentModal" type="button">
+                                            Add New <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div> -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="btn-group pull-right">
+                                        <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    Print </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    Save as PDF </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    Export to Excel </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover table-bordered" id="students_in_class_list">
+                            <thead>
+                                <tr>
+                                    <th data-editable="true">
+                                        <input type="checkbox">
+                                    </th>
 
+                                    <th data-editable="true">
+                                        Full name
+                                    </th>
+
+                                    <th data-editable="true">
+                                        DOB
+                                    </th>
+
+                                    <th>
+                                        Info Contact
+                                    </th>
+
+                                    <th>
+                                        Tuition paid
+                                    </th>
+
+                                    <th>
+                                        Discount code
+                                    </th>
+
+                                    <th>
+                                        Notes
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+
+                                    <td data-editable="true">
+                                        Ho Thi Lan Huong
+                                    </td>
+                                    <td data-editable="true">
+                                        17/10/1998
+                                    </td>
+
+                                    <td>
+                                        <ul>
+                                            <li>Student </li>
+                                            <li>233 hoang hoa tham , p10,q3</li>
+                                            <li>0338490118</li>
+                                            <li><a href="#" data-target="#infoContactModal" data-toggle="modal">Detail Contact</a></li>
+                                        </ul>
+                                    </td>
+
+                                    <td>
+                                        MS01
+                                    </td>
+
+                                    <td>
+                                        2,090,000
+                                    </td>
+
+                                    <td>
+                                        <a href="#" data-target="#historyAttendaceOfStudentModal" data-toggle="modal">attendance</a>
+                                    </td>
+
+                                    <td>
+                                        Da lien he voi phu huynh
+                                    </td>
+
+                                    <td>
+                                        <ul class="list-group">
+                                            <li class="list-group-item list-group-item-success">
+                                                <a class="btn btn-icon-only green" data-toggle="modal" data-target="#historyPaidOfStudentModal" title="Tuition fee">
+                                                    <i class="fa fa-group"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item list-group-item-warning">
+                                                <a href="#" class="btn btn-icon-only yellow" data-target="#addActiveStudentModal" data-toggle="modal" title="Edit info">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item list-group-item-danger">
+                                                <a href="#" class="btn btn-icon-only red" data-toggle="modal" data-target="#deleteConfirmationModal" title="Remove out class">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- END EXAMPLE TABLE PORTLET-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="fa fa-check"></i> Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END STUDENT LIST IN CLASS MODAL -->
 <!-- BEGIN ADD STUDENT MODAL -->
 <div id="addActiveStudentModal" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Add Student Info</h4>
+                <h4 class="modal-title">Student Info</h4>
             </div>
             <div class="modal-body form">
                 <!-- BEGIN EXAMPLE TABLE PORTLET-->
                 <div class="portlet box green">
                     <div class="portlet-title">
                         <div class="caption">
-                            <i class="fa fa-edit"></i>Add Student
+                            <i class="fa fa-edit"></i>Student
                         </div>
                         <div class="tools">
                             <!-- <a href="javascript:;" class="collapse">
@@ -1176,7 +1340,11 @@
                                     <div class="col-md-8">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="checkbox" class="form-control" name="is_young_children" />
+                                            {{-- <input type="checkbox" class="form-control" name="is_young_children" /> --}}
+                                            <select name="is_young_children" class="form-control">
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -1226,7 +1394,7 @@
                                             <div class="col-md-6">
                                                 <div class="input-icon right">
                                                     <i class="fa"></i>
-                                                    <input type="text" class="form-control" name="parent_email" value="" />
+                                                    <input type="email" class="form-control" name="parent_email" value="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -1253,7 +1421,7 @@
                                     <label class="control-label col-md-3">Expected class<span class="required">
                                             * </span>
                                     </label>
-                                    <div class="col-md-5">
+                                    <div class="col-md-7">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
                                             <select class="form-control">
@@ -1269,10 +1437,14 @@
                                     <label class="control-label col-md-3">Is tested? <span class="required">
                                             * </span>
                                     </label>
-                                    <div class="col-md-8">
+                                    <div class="col-md-7">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="checkbox" class="form-control" name="is_tested" />
+                                            {{-- <input type="checkbox" class="form-control" name="is_tested" /> --}}
+                                            <select class="form-control" name="is_tested">
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -1374,7 +1546,7 @@
                                                             <label class="control-label col-md-3"> </label>
                                                             <div class="col-md-8">
                                                                 <div class="btn-group">
-                                                                    <button id="sample_editable_1_new" class="btn green" data-toggle="modal" data-target="#addTeacherModal">
+                                                                    <button id="sample_editable_1_new" class="btn green" data-toggle="modal" data-target="#addTeacherModal" type="button">
                                                                         Add New <i class="fa fa-plus"></i>
                                                                     </button>
                                                                 </div>
@@ -1533,14 +1705,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Add Student Info</h4>
+                <h4 class="modal-title">Student Info</h4>
             </div>
             <div class="modal-body form">
                 <!-- BEGIN EXAMPLE TABLE PORTLET-->
                 <div class="portlet box green">
                     <div class="portlet-title">
                         <div class="caption">
-                            <i class="fa fa-edit"></i>Add Student
+                            <i class="fa fa-edit"></i>Student
                         </div>
                         <div class="tools">
                             <!-- <a href="javascript:;" class="collapse">
@@ -1609,9 +1781,9 @@
                                     <div class="col-md-8">
                                         <table class="table table-striped table-hover table-bordered" id="test-result-table">
                                             <tr>
-                                                <th>writing</th>
-                                                <th>speaking</th>
-                                                <th>listening</th>
+                                                <th>W</th>
+                                                <th>S</th>
+                                                <th>L</th>
                                                 <th>Overall</th>
                                             </tr>
                                             <tr>
@@ -1683,7 +1855,11 @@
                                     <div class="col-md-8">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="checkbox" class="form-control" name="is_young_children" />
+                                            {{-- <input type="checkbox" class="form-control" name="is_young_children" /> --}}
+                                            <select name="is_young_children" class="form-control">
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -1742,7 +1918,7 @@
                                             <div class="col-md-6">
                                                 <div class="input-icon right">
                                                     <i class="fa"></i>
-                                                    <input type="text" class="form-control" name="parent_email" value="" />
+                                                    <input type="email" class="form-control" name="parent_email" value="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -2132,14 +2308,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Add Student Info</h4>
+                <h4 class="modal-title">Student Info</h4>
             </div>
             <div class="modal-body form">
                 <!-- BEGIN EXAMPLE TABLE PORTLET-->
                 <div class="portlet box green">
                     <div class="portlet-title">
                         <div class="caption">
-                            <i class="fa fa-edit"></i>Add Student
+                            <i class="fa fa-edit"></i>Student
                         </div>
                         <div class="tools">
                             <!-- <a href="javascript:;" class="collapse">
@@ -2241,7 +2417,11 @@
                                     <div class="col-md-8">
                                         <div class="input-icon right">
                                             <i class="fa"></i>
-                                            <input type="checkbox" class="form-control" name="is_young_children" />
+                                            {{-- <input type="checkbox" class="form-control" name="is_young_children" /> --}}
+                                            <select name="is_young_children" class="form-control">
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -2300,7 +2480,7 @@
                                             <div class="col-md-6">
                                                 <div class="input-icon right">
                                                     <i class="fa"></i>
-                                                    <input type="text" class="form-control" name="parent_email" value="" />
+                                                    <input type="email" class="form-control" name="parent_email" value="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -2567,9 +2747,9 @@
                                         <div class="col-md-8">
                                             <table class="table table-striped table-hover table-bordered" id="test-result-table">
                                                 <tr>
-                                                    <th>writing</th>
-                                                    <th>speaking</th>
-                                                    <th>listening</th>
+                                                    <th>W</th>
+                                                    <th>S</th>
+                                                    <th>L</th>
                                                     <th>Overall</th>
                                                 </tr>
                                                 <tr>
@@ -3000,170 +3180,7 @@
 </div>
 <!-- END GRADE AND FEE OF STUDENT MODAL -->
 
-<!-- BEGIN STUDENT LIST IN CLASS MODAL -->
-<div class="modal fade" id="studentListCheckInModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
-    <div class="modal-dialog modal-full">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Student List in Class</h4>
-            </div>
-            <div class="modal-body form">
-                <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                <div class="portlet box blue">
-                    <div class="portlet-title">
-                        <div class="caption">
-                            <i class="fa fa-edit"></i>Student list in class :
-                        </div>
-                        <div class="tools">
-                            <a href="javascript:;" class="collapse">
-                            </a>
-                            <!-- <a href="#portlet-config" data-toggle="modal" class="config">
-                            </a> -->
-                            <a href="javascript:;" class="reload">
-                            </a>
-                            <!-- <a href="javascript:;" class="remove">
-                            </a> -->
-                        </div>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="table-toolbar">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <!-- <div class="btn-group">
-                                        <button id="add_student_to_class_btn" class="btn green" data-toggle="modal" data-target="#listPotentialStudentModal" type="button">
-                                            Add New <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div> -->
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="btn-group pull-right">
-                                        <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                        </button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li>
-                                                <a href="javascript:;">
-                                                    Print </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    Save as PDF </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    Export to Excel </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <table class="table table-striped table-hover table-bordered" id="students_in_class_list">
-                            <thead>
-                                <tr>
-                                    <th data-editable="true">
-                                        <input type="checkbox">
-                                    </th>
 
-                                    <th data-editable="true">
-                                        Full name
-                                    </th>
-
-                                    <th data-editable="true">
-                                        DOB
-                                    </th>
-
-                                    <th>
-                                        Info Contact
-                                    </th>
-
-                                    <th>
-                                        Tuition paid
-                                    </th>
-
-                                    <th>
-                                        Discount code
-                                    </th>
-
-                                    <th>
-                                        Notes
-                                    </th>
-
-                                    <th>
-                                        Action
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-
-                                    <td data-editable="true">
-                                        Ho Thi Lan Huong
-                                    </td>
-                                    <td data-editable="true">
-                                        17/10/1998
-                                    </td>
-
-                                    <td>
-                                        <ul>
-                                            <li>Student </li>
-                                            <li>233 hoang hoa tham , p10,q3</li>
-                                            <li>0338490118</li>
-                                            <li><a href="#" data-target="#infoContactModal" data-toggle="modal">Detail Contact</a></li>
-                                        </ul>
-                                    </td>
-
-                                    <td>
-                                        MS01
-                                    </td>
-
-                                    <td>
-                                        2,090,000
-                                    </td>
-
-                                    <td>
-                                        <a href="#" data-target="#historyAttendaceOfStudentModal" data-toggle="modal">attendance</a>
-                                    </td>
-
-                                    <td>
-                                        Da lien he voi phu huynh
-                                    </td>
-
-                                    <td>
-                                        <ul class="list-group">
-                                            <li class="list-group-item list-group-item-success">
-                                                <a class="btn btn-icon-only green" data-toggle="modal" data-target="#historyPaidOfStudentModal" title="Tuition fee">
-                                                    <i class="fa fa-group"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-group-item list-group-item-warning">
-                                                <a href="#" class="btn btn-icon-only yellow" data-target="#addActiveStudentModal" data-toggle="modal" title="Edit info">
-                                                    <i class="fa fa-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-group-item list-group-item-danger">
-                                                <a href="#" class="btn btn-icon-only red" data-toggle="modal" data-target="#deleteConfirmationModal" title="Remove out class">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- END EXAMPLE TABLE PORTLET-->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary"><i class="fa fa-check"></i> Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END STUDENT LIST IN CLASS MODAL -->
 <!-- BEGIN attendance IN MODAL -->
 <div class="modal fade" id="historyAttendanceOfStudentModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
@@ -3390,7 +3407,7 @@
                                     <th>
                                         Note
                                     </th>
-                                    <th>
+                                    <th style="width:18%">
                                         Action
                                     </th>
                                 </tr>
@@ -3435,7 +3452,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary"><i class="fa fa-check"></i> Save changes</button>
+                <button type="button" class="btn btn-primary"><i class="fa fa-check"></i> Save</button>
             </div>
         </div>
     </div>
@@ -3504,9 +3521,9 @@
                                         <div class="col-md-8">
                                             <table class="table table-striped table-hover table-bordered" id="test-result-table">
                                                 <tr>
-                                                    <th>writing</th>
-                                                    <th>speaking</th>
-                                                    <th>listening</th>
+                                                    <th>W</th>
+                                                    <th>S</th>
+                                                    <th>L</th>
                                                     <th>Overall</th>
                                                 </tr>
                                                 <tr>
@@ -3564,9 +3581,9 @@
                                         <div class="col-md-8">
                                             <table class="table table-striped table-hover table-bordered" id="test-result-table">
                                                 <tr>
-                                                    <th>writing</th>
-                                                    <th>speaking</th>
-                                                    <th>listening</th>
+                                                    <th>W</th>
+                                                    <th>S</th>
+                                                    <th>L</th>
                                                     <th>Overall</th>
                                                 </tr>
                                                 <tr>

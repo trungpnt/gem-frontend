@@ -117,6 +117,9 @@
                             <th data-editable="true">
                                 Role
                             </th>
+                            <th data-editable="true">
+                                Assign to
+                            </th>
                             <th>
                                 Action
                             </th>
@@ -133,6 +136,9 @@
                             </td>
                             <td>
                                 Teacher
+                            </td>
+                            <td>
+                                Nguyen Thi Lan
                             </td>
                             <td>
                                 <a href="#" class="edit btn btn-icon-only blue">
@@ -155,6 +161,9 @@
                                 Teacher
                             </td>
                             <td>
+                                Nguyen Thi Minh Khai
+                            </td>
+                            <td>
                                 <a href="#" class="edit btn btn-icon-only blue">
                                     <i class="fa fa-edit"></i>
                                 </a>
@@ -175,24 +184,7 @@
                                 Teacher assistant
                             </td>
                             <td>
-                                <a href="#" class="edit btn btn-icon-only blue">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a href="#" class="delete btn btn-icon-only red">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                huynq
-                            </td>
-                            <td>
-                                abc123
-                            </td>
-                            <td>
-                                Teacher assistant
+                                Ho Thi Dieu Hue
                             </td>
                             <td>
                                 <a href="#" class="edit btn btn-icon-only blue">

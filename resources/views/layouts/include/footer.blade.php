@@ -709,6 +709,10 @@
        Demo.init(); // init demo features
        TableAccount.init();
        FormValidation.init();
+      //  TableListTeacher.init();
+       TableListTeacher.init('#teacher-list-table');
+       TableListTeacher.init('#teacher-assistant-list-table');
+       HistoryPaidFeeStudent.init();
 
    });
 </script>
