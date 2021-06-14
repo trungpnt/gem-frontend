@@ -3212,7 +3212,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="btn-group">
-                                        <button id="add_paid_transaction" class="btn green" type="button">
+                                        <button id="add_paid_transaction" class="btn green add_paid_transaction" type="button">
                                             Add New <i class="fa fa-plus"></i>
                                         </button>
                                     </div>
@@ -3358,7 +3358,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="btn-group">
-                                        <button id="add_paid_transaction" class="btn green" type="button">
+                                        <button id="add_paid_transaction" class="btn green add_paid_transaction" type="button">
                                             Add New <i class="fa fa-plus"></i>
                                         </button>
                                     </div>

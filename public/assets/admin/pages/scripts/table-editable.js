@@ -918,7 +918,8 @@ var HistoryPaidFeeStudent = function () {
             jqTds[0].innerHTML = '<input type="date" class="form-control input-small" value="' + aData[0] + '">';
             jqTds[1].innerHTML = '<input type="number" class="form-control input-small" value="' + aData[1] + '">';
             jqTds[3].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[3] + '">';
-            jqTds[4].innerHTML = '<a class="edit-paid" href="">Save</a>&nbsp;<a class="cancel" href="">Cancel</a>';	
+            jqTds[4].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[4] + '">';
+            jqTds[5].innerHTML = '<a class="edit-paid" href="">Save</a>&nbsp;<a class="cancel" href="">Cancel</a>';	
         }
 
         function saveRow(oTable, nRow) {
@@ -926,7 +927,8 @@ var HistoryPaidFeeStudent = function () {
             oTable.fnUpdate(jqInputs[0].value, nRow, 0, false);
             oTable.fnUpdate(jqInputs[1].value, nRow, 1, false);
             oTable.fnUpdate(jqInputs[2].value, nRow, 3, false);
-            oTable.fnUpdate('<a href="#" class="btn edit-paid btn-icon-only yellow" title="Edit"><i class="fa fa-edit"></i></a><a href="#" class="btn delete-paid btn-icon-only red" title="Delete"><i class="fa fa-times"></i></a>', nRow, 4, false);
+            oTable.fnUpdate(jqInputs[3].value, nRow, 4, false);
+            oTable.fnUpdate('<a href="#" class="btn edit-paid btn-icon-only yellow" title="Edit"><i class="fa fa-edit"></i></a><a href="#" class="btn delete-paid btn-icon-only red" title="Delete"><i class="fa fa-times"></i></a>', nRow, 5, false);
             oTable.fnDraw();
         }
 
@@ -935,7 +937,8 @@ var HistoryPaidFeeStudent = function () {
             oTable.fnUpdate(jqInputs[0].value, nRow, 0, false);
             oTable.fnUpdate(jqInputs[1].value, nRow, 1, false);
             oTable.fnUpdate(jqInputs[2].value, nRow, 3, false);
-            oTable.fnUpdate('<a href="#" class="btn edit-paid btn-icon-only yellow" title="Edit"><i class="fa fa-edit"></i></a><a href="#" class="btn delete-paid btn-icon-only red" title="Delete"><i class="fa fa-times"></i></a>', nRow, 4, false);
+            oTable.fnUpdate(jqInputs[3].value, nRow, 4, false);
+            oTable.fnUpdate('<a href="#" class="btn edit-paid btn-icon-only yellow" title="Edit"><i class="fa fa-edit"></i></a><a href="#" class="btn delete-paid btn-icon-only red" title="Delete"><i class="fa fa-times"></i></a>', nRow, 5, false);
             oTable.fnDraw();
         }
         
@@ -985,7 +988,7 @@ var HistoryPaidFeeStudent = function () {
         var nEditing = null;
         var nNew = false;
 
-        $('#add_paid_transaction').click(function (e) {
+        $('.add_paid_transaction').click(function (e) {
             console.log('hoho');
             e.preventDefault();
 
@@ -1005,7 +1008,7 @@ var HistoryPaidFeeStudent = function () {
                 }
             }
 
-            var aiNew = oTable.fnAddData(['', '', '','', '']);
+            var aiNew = oTable.fnAddData(['', '', '','', '','']);
             var nRow = oTable.fnGetNodes(aiNew[0]);
             
             editRow(oTable, nRow);
@@ -1066,6 +1069,7 @@ var HistoryPaidFeeStudent = function () {
 
         //main function to initiate the module
         init: function () {
+            console.log('huhu');
             handleTable();
         }
 
